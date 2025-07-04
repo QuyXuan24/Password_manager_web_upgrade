@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Danh Sách Tài Khoản</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>📋 Danh sách tài khoản</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Website</th>
+                <th>Tên tài khoản</th>
+                <th>Mật khẩu</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for acc in accounts %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ acc.site }}</td>
+                <td>{{ acc.username_plain }}</td>
+                <td>{{ acc.password_plain }}</td>
+                <td>
+                    <form action="/xoa" method="POST">
+                        <input type="hidden" name="site" value="{{ acc.site }}">
+                        <input type="hidden" name="username" value="{{ acc.username_enc }}">
+                        <button type="submit" onclick="return confirm('Bạn có chắc muốn xoá không?')">Xoá</button>
+                    </form>
+                    <form action="/sua" method="GET">
+                        <input type="hidden" name="site" value="{{ acc.site }}">
+                        <input type="hidden" name="username" value="{{ acc.username_plain }}">
+                        <input type="hidden" name="username_enc" value="{{ acc.username_enc }}">
+                        <button type="submit">Sửa</button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="back-btn">
+        <a href="/">⬅️ Quay lại trang chính</a>
+    </div>
+</body>
+</html>

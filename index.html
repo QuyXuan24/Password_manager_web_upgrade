@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm Tài Khoản</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Trình Quản Lý Mật Khẩu</h1>
+
+        <!-- Nút xem danh sách -->
+        <div class="top-right-link">
+            <a href="/xacnhan">🔑 Xem danh sách tài khoản</a>
+        </div>
+
+        <form action="/them" method="POST">
+            <label>🌐 Website:</label>
+            <input type="text" name="site" required>
+
+            <label>👤 Tên tài khoản:</label>
+            <input type="text" name="username" required>
+
+            <label>🔒 Mật khẩu:</label>
+            <input type="password" name="password" required>
+
+            <button type="submit">Thêm</button>
+        </form>
+    </div>
+</body>
+</html>

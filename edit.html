@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Sửa Tài Khoản</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h2>✏️ Sửa tài khoản cho website: {{ site }}</h2>
+        <form method="POST">
+            <input type="hidden" name="site" value="{{ site }}">
+            <input type="hidden" name="old_username" value="{{ username_enc }}">
+
+            <label>Tên tài khoản mới:</label><br>
+            <input type="text" name="new_username" value="{{ username_plain }}"><br>
+
+            <label>Mật khẩu mới:</label><br>
+            <input type="text" name="new_password"><br>
+
+            <button type="submit">Cập nhật</button>
+            <a href="/danhsach" class="cancel-link">Huỷ</a>
+        </form>
+    </div>
+</body>
+</html>
