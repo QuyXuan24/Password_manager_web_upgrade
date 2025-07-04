@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 40px;
+    color: #333;
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 4px 0;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+form {
+    display: inline-block;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.cancel-link {
+    margin-left: 10px;
+    color: #555;
+    text-decoration: none;
+}
+
+.cancel-link:hover {
+    color: #000;
+}
+
+/* Container căn giữa cho form */
+.form-container {
+    background-color: white;
+    max-width: 480px;
+    margin: 60px auto;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Link ở góc trên cùng */
+.top-right-link {
+    float: right;
+    margin-top: -60px;
+}
+
+.top-right-link a {
+    text-decoration: none;
+    color: white;
+    background-color: #28a745;
+    padding: 8px 14px;
+    border-radius: 4px;
+}
+
+.top-right-link a:hover {
+    background-color: #218838;
+}
+
+.back-btn {
+    margin-top: 20px;
+}
+
+.back-btn a {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.back-btn a:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    color: red;
+    margin-bottom: 12px;
+}
